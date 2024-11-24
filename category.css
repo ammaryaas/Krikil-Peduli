@@ -1,0 +1,286 @@
+.logo img{
+    width: 50%;
+    height: auto;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    height: 90px;
+    width: 75%;
+    margin: 0 auto;
+    font-size: 1.5em;
+}
+.navbar a {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+    border-bottom: 3px solid transparent;
+}
+.navbar .menu a:not(.login):hover{
+    color: #fff100;
+}
+.navbar .menu a:not(.login)::after {
+    content: ''; 
+    position: absolute; 
+    bottom: -5px; 
+    left: 50%; 
+    width: 0; 
+    height: 3px; 
+    background-color: #fff100; 
+    transform: translateX(-50%); 
+    transition: width 0.5s ease; 
+}
+.navbar .menu a:not(.login):hover::after {
+    width: 100%; 
+}
+.navbar .menu a:not(.login),
+.navbar .menu a.active:not(.login) {  /* tambahkan selector untuk active state */
+    position: relative;
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar .menu a:not(.login):hover,
+.navbar .menu a.active:not(.login) {  /* tambahkan selector untuk active state */
+    color: #fff100;
+}
+
+.navbar .menu a:not(.login)::after,
+.navbar .menu a.active:not(.login)::after {  /* tambahkan selector untuk active state */
+    content: ''; 
+    position: absolute; 
+    bottom: -5px; 
+    left: 50%; 
+    width: 0; 
+    height: 3px; 
+    background-color: #fff100; 
+    transform: translateX(-50%); 
+    transition: width 0.5s ease; 
+}
+
+.navbar .menu a:not(.login):hover::after,
+.navbar .menu a.active:not(.login)::after {  /* tambahkan selector untuk active state */
+    width: 100%; 
+}
+.navbar .login {
+    background-color: #fff100;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    top: 0;
+}
+.navbar .login:hover {
+    background-color: white;
+    color: #fff100;
+    border: 2px solid #fff100; 
+    top: -5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+}
+
+.title {
+    height: 200px;
+}
+
+.blue {
+    background-color: #0066ff;
+    justify-content: space-between;
+    display: flex;
+    height: 200px;
+    width: 100%;
+    position: absolute;
+}
+
+.blue h1 {
+    margin-top: 65px;
+    margin-left: -30px;
+    font-size: 10em;
+    color: white;
+}
+
+.blue svg {
+    padding: 30px;
+    color: white;
+    height: 150px;
+    width: auto;
+}
+
+.icon {
+    justify-content: flex-end;
+    display: flex;
+    height: 100px;
+    width: 100%;
+}
+
+.icon div {
+    padding: 30px;
+    align-items: center;
+    display: flex;
+    gap: 7px;
+}
+
+.icon svg {
+    color: #fff100;
+    height: 40px;
+    width: auto;
+}
+
+.icon span {
+    color: #fff100;
+    font-size: 40px;
+}
+
+.card-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    display: grid;
+    height: 200vh;
+    width: 100%;
+}
+
+.grid {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+
+.kotak {
+    background-size: cover;
+    background-position: center;
+    align-items: flex-end;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px;
+    height: 700px;
+    width: 700px;
+}
+
+.kotak.Frank {
+    background-image: url('asset/frank.jpg');
+    
+}
+ 
+.kotak.Moby {
+    background-image: url('asset/moby.jpg');
+}
+ 
+.kotak.Alex {
+    background-image: url('asset/alex.jpg');
+}
+ 
+.kotak.Daniel {
+    background-image: url('asset/daniel.jpg');
+}
+
+.card-container h1 {
+    font-size: 2.5em;
+    color: white;
+    padding: 20px 50px;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.kotak:hover h1 {
+    z-index: 1;
+    transform: translateY(-130px);
+}
+
+.overlay {
+    position: absolute;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-end;
+    display: flex;
+    margin-left: auto;
+    height: 700px;
+    width: 700px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 30%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.kotak:hover .overlay {
+    opacity: 1;
+}
+
+.overlay img {
+    height: 100px;
+    width: 100px;
+    padding: 30px;
+    transform: translateY(-50px) rotate(45deg);
+    transition: transform 0.3s ease;
+}
+
+.kotak:hover .overlay img {
+    transform: translateY(0) rotate(0);
+}
+
+.kuning {
+    background-color: #fff100;
+    font-size: 2.3em;
+    color: white;
+    height: 140px;
+    width: 100%;
+    transform: translateY(150px);
+    transition: transform 0.3s ease;
+}
+
+.kotak:hover .kuning {
+    transform: translateY(0);
+}
+
+.kuning h2{
+    font-size: 1.3em;
+    margin: 0;
+    padding: 0px 50px;
+    padding-top: 5px;
+}
+
+.kuning p {
+    padding: 0px 50px;
+    margin: 0;
+    font-size: 25px;
+}
+
+.bar {
+    background-color: white;
+    border-radius: 30px;
+    margin-top: 15px;
+    margin-left: 50px;
+    height: 15px;
+    width: 60%;
+    transform: scalex(0.3);
+    transform-origin: left;
+    transition: transform 0.9s ease;
+}
+
+.kotak:hover .bar {
+    transform: scaleX(1);
+}
+
+.bar-contain {
+    border: 2px solid white;
+    position: absolute;
+    border-radius: 30px;
+    margin-left: 50px;
+    margin-top: -17px;
+    height: 15px;
+    width: 85%;
+}
