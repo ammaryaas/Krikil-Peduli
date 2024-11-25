@@ -214,6 +214,9 @@ body {
     flex-direction: column;
     
 }
+.grid a{
+    text-decoration: none;
+}
 .kotakkategori:hover {
     transform: translateY(-10px);
     background-color: #0066FF;
