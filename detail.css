@@ -130,6 +130,7 @@ body {
     height: 50px;
     width: 150px;
     font-size: 30px;
+    cursor: pointer;
 }
 
 .btn-solid:hover {
@@ -218,6 +219,7 @@ body {
     bottom: 0;
     right: 0;
     gap: 30px;
+    cursor: pointer;
 }
 
 .gmbr svg {
@@ -361,25 +363,64 @@ body {
     height: 400px;
 }
 
-.social {
-    background-color: purple;
+.social-links {
     height: 90px;
     width: 50%;
-}
-
-.par {
-    color: #0066ff;
-    text-align: center;
-    font-size: 24px;
-    height: 140px;
-    width: 50%;
-}
-
-.logfoot {
     justify-content: center;
     align-items: center;
     display: flex;
-    height: 130px;
+    gap: 40px;
+}
+.social-links i{
+    color: #0066FF;
+    font-size: 35px;
+    display: inline-block;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.social-links a .bi-youtube:hover{
+    color: red;
+    transition: all 0.3s ease;
+    transform: scale(1.7) translateZ(0);
+}
+.social-links a .bi-twitter-x:hover{
+    color: black;
+    transition: all 0.3s ease;
+    transform: scale(1.5) translateZ(0);
+}
+.social-links a .bi-instagram:hover{
+    background: linear-gradient(to top right, yellow, orange, red, purple, blue);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: all 0.3s ease;
+    transform: scale(1.5) translateZ(0);
+}
+.social-links a .bi-linkedin:hover{
+    color: #0077B5;
+    transition: all 0.3s ease;
+    transform: scale(1.5) translateZ(0);
+}
+
+.par {
+    /* background-color: purple; */
+    color: #0066ff;
+    text-align: center;
+    font-size: 24px;
+    height: 120px;
+    width: 50%;
+}  
+
+.par p {
+    margin: 0;
+}
+
+.logfoot {
+    /* background-color: red; */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 150px;
 }
 
 .logfoot img {
@@ -388,6 +429,7 @@ body {
 }
 
 .copy {
+    /* background-color: #fff; */
     text-align: center;
     color: #0066ff;
     height: 30px;
