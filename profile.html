@@ -33,13 +33,15 @@
             <div class="overlay-content">
                 <div class="gambarslide">
                     <div class="slider">
-                        <div class="arrow left-arrow">&#8249;</div>
+                        <div class="arrow left-arrow" onclick="moveRight()">&#8249;</div>
                         <div class="slider-wrapper">
-                            <img src="asset/profil1.jpg" alt="Aktivitas 1" class="profile-image">
-                            <img src="asset/profil2.jpg" alt="Aktivitas 2" class="profile-image">
-                            <img src="asset/profil3.jpg" alt="Aktivitas 3" class="profile-image">
+                            <img src="asset/profil1.jpg" alt="Aktivitas 1" class="profile-image left">
+                            <img src="asset/profil2.jpg" alt="Aktivitas 2" class="profile-image center">
+                            <img src="asset/profil3.jpg" alt="Aktivitas 3" class="profile-image right">
+                            <img src="asset/profil4.jpg" alt="Aktivitas 4" class="profile-image left-hidden">
+                            <img src="asset/profil5.jpg" alt="Aktivitas 5" class="profile-image right-hidden">
                         </div>
-                        <div class="arrow right-arrow">&#8250;</div>
+                        <div class="arrow right-arrow" onclick="moveLeft()">&#8250;</div>
                     </div>
                 </div>
                 <div class="deskripsi">
@@ -82,5 +84,53 @@
             </a>
         </div>
     </div>
+    <script>
+        function moveRight() {
+  const images = document.querySelectorAll('.profile-image');
+
+  images.forEach((img) => {
+    if (img.classList.contains('center')) {
+      img.classList.remove('center');
+      img.classList.add('left');
+    } else if (img.classList.contains('right')) {
+      img.classList.remove('right');
+      img.classList.add('center');
+    } else if (img.classList.contains('right-hidden')) {
+      img.classList.remove('right-hidden');
+      img.classList.add('right');
+    } else if (img.classList.contains('left')) {
+      img.classList.remove('left');
+      img.classList.add('left-hidden');
+    } else if (img.classList.contains('left-hidden')) {
+      img.classList.remove('left-hidden');
+      img.classList.add('right-hidden');
+    }
+  });
+}
+
+function moveLeft() {
+  const images = document.querySelectorAll('.profile-image');
+
+  images.forEach((img) => {
+    if (img.classList.contains('center')) {
+      img.classList.remove('center');
+      img.classList.add('right');
+    } else if (img.classList.contains('left')) {
+      img.classList.remove('left');
+      img.classList.add('center');
+    } else if (img.classList.contains('left-hidden')) {
+      img.classList.remove('left-hidden');
+      img.classList.add('left');
+    } else if (img.classList.contains('right')) {
+      img.classList.remove('right');
+      img.classList.add('right-hidden');
+    } else if (img.classList.contains('right-hidden')) {
+      img.classList.remove('right-hidden');
+      img.classList.add('left-hidden');
+    }
+  });
+}
+
+    </script>
 </body>
 </html>

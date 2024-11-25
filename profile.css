@@ -153,14 +153,13 @@ body {
     align-items: flex-start;
     justify-content: center;
     gap: 250px;
-    
-    
 }
 
 .gambarslide {
     position: relative; 
     display: flex;
     align-items: center;
+    
 }
 
 .slider {
@@ -183,22 +182,31 @@ body {
     object-fit: cover;
     border-radius: 60px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
 }
-.profile-image:nth-child(1) {
-    transform: translateX(-60%) scale(1.1);
-    z-index: 1;
-    filter: brightness(0.7);
-}
-
-.profile-image:nth-child(2) {
-    transform: translateX(0) scale(1.2);
-    z-index: 2;
+.profile-image.center {
+  transform: translateX(0) scale(1.2);
+  opacity: 1;
+  z-index: 2;
 }
 
-.profile-image:nth-child(3) {
-    transform: translateX(60%) scale(1.1);
-    z-index: 1;
-    filter: brightness(0.7);
+.profile-image.right {
+  transform: translateX(180px) scale(1.1);
+  z-index: 1;
+  filter: brightness(0.4);
+}
+
+.profile-image.left {
+  transform: translateX(-60%) scale(1.1);
+  z-index: 1;
+  filter: brightness(0.4);
+}
+
+.profile-image.left-hidden {
+    filter: brightness(0.4); 
+}
+.profile-image.right-hidden{
+    filter: brightness(0.4);
 }
 .arrow {
     position: absolute;
@@ -245,6 +253,7 @@ body {
     
 }
 .bungkus{
+    color: #0066FF;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -276,12 +285,12 @@ body {
 
 .about a {
     text-decoration: none;
-    color: #333;
+    color: #0066FF;
     margin: 0 10px;
 }
 
 .copyright {
-    color: #666;
+    color: #0066FF;
     font-size: 14px;
 }
 
