@@ -95,68 +95,71 @@ body {
     top: -5px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
 }
-.gambar1 {
-    position: relative;
-    text-align: left;
-    color: white;
-    overflow: visible; 
-    height: auto;  
-    border-radius: 40px;
-    margin: 0 auto; 
-    width: 90%;  
-    max-width: 100vw;
-}
-.gambar1 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 40px; 
 
+.bg {
+    justify-content: center;
+    display: flex;
+    height: 90vh;
+    width: 100%;
 }
-.gambar1 .tangan {
+
+.bg img {
     position: absolute;
-    top: 53%; 
-    left: -25%; 
-    transform: translateY(-50%) scale(0.9);
-    width: 138%; 
-    z-index: 2;
-    pointer-events: none; 
+    height: 85vh;
 }
+
+.tangan {
+    width: 200vh;
+    object-fit: cover;
+    /* z-index: 2; */
+}
+
 .text {
-    position: absolute;
-    top: 10%; 
-    left: 5%; 
-    z-index: 2; 
-    color: white; 
-    max-width: 50%; 
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    z-index: 1;
+    height: 85vh;
+    width: 160vh;
 }
-.text h1 {
-    font-size: 4em;
-    line-height: 0.8;
-    margin-bottom: 5px;
-}          
-.text p {
-    margin-top: 0;
-    font-size: 1em;
+
+.judul {
+    padding: 90px;
+}
+
+.judul h1 {
+    font-size: 5.5em;
     color: white;
+    line-height: 0.9;
+    margin: 0;
 }
-.text .donasi {
-    position: absolute;
-    right: -850px;
-    bottom: -435px;
-    font-size: 4em;
-    background-color: #FFE600; 
-    padding: 15px 60px; 
-    border-radius: 50px; 
+
+.judul p {
+    color: white;
+    font-size: 1.5em;
+    padding-top: 10px;
+    max-width: 35%;
+    margin: 0;
+}
+
+.btn-donasi {
+    justify-content: flex-end;
+    align-items: flex-end;
+    display: flex;
+}
+
+.btn-donasi button {
+    background-color: #fff100;
+    color: white;
+    font-size: 3.5em;
     text-decoration: none;
-    color: white;
-    display: inline-block;
-    font-weight: bold; 
-    border: 3px solid transparent; 
-    transition: all 0.3s ease;
+    border-radius: 50px;
+    border: none;
+    height: 100px;
+    width: 355px;
 }
-.text .donasi:hover {
+.btn-donasi button:hover {
     background-color: white;
+    cursor: pointer;
     color: #FFE600;
     border: 3px solid #FFE600;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
