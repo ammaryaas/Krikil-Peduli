@@ -217,8 +217,8 @@ form {
 }
 
 .button button:hover {
-    border-color: #1e5ab4;
-    color: #1e5ab4;
+    border-color: var(--kuning);
+    color: var(--kuning);
 }
 
 .kanan {
