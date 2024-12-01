@@ -173,20 +173,20 @@ body {
 }
 
 .kotak.Frank {
-    background-image: url('asset/frank.jpg');
+    background-image: url('../asset/frank.jpg');
     
 }
  
 .kotak.Moby {
-    background-image: url('asset/moby.jpg');
+    background-image: url('../asset/moby.jpg');
 }
  
 .kotak.Alex {
-    background-image: url('asset/alex.jpg');
+    background-image: url('../asset/alex.jpg');
 }
  
 .kotak.Daniel {
-    background-image: url('asset/daniel.jpg');
+    background-image: url('../asset/daniel.jpg');
 }
 
 .card-container h1 {

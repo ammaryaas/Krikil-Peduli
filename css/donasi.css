@@ -1,0 +1,387 @@
+:root {
+    --kuning: #fff100;
+    --biru: #0066ff;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+    overflow-x: hidden;
+
+}
+.logo img{
+    width: 50%;
+    height: auto;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    height: 90px;
+    width: 76%;
+    margin: 0 auto;
+    font-size: 1.5em;
+}
+.navbar a {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+    border-bottom: 3px solid transparent;
+}
+.navbar .menu a:not(.login):hover{
+    color: #fff100;
+}
+.navbar .menu a:not(.login)::after {
+    content: ''; 
+    position: absolute; 
+    bottom: -5px; 
+    left: 50%; 
+    width: 0; 
+    height: 3px; 
+    background-color: #fff100; 
+    transform: translateX(-50%); 
+    transition: width 0.5s ease; 
+}
+.navbar .menu a:not(.login):hover::after {
+    width: 100%; 
+}
+.navbar .menu a:not(.login),
+.navbar .menu a.active:not(.login) { 
+    position: relative;
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar .menu a:not(.login):hover,
+.navbar .menu a.active:not(.login) {  
+    color: #fff100;
+}
+
+.navbar .menu a:not(.login)::after,
+.navbar .menu a.active:not(.login)::after {  
+    content: ''; 
+    position: absolute; 
+    bottom: -5px; 
+    left: 50%; 
+    width: 0; 
+    height: 3px; 
+    background-color: #fff100; 
+    transform: translateX(-50%); 
+    transition: width 0.5s ease; 
+}
+
+.navbar .menu a:not(.login):hover::after,
+.navbar .menu a.active:not(.login)::after {  
+    width: 100%; 
+}
+.navbar .login {
+    background-color: #fff100;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    top: 0;
+}
+.navbar .login:hover {
+    background-color: white;
+    color: #fff100;
+    border: 2px solid #fff100; 
+    top: -5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+}
+
+.utama {
+    /* background-color: red; */
+    height: 90vh;
+    width: 100%;
+    display: flex;
+}
+
+.kiri {
+    /* background-color: yellow; */
+    height: 100%;
+    width: 100%;
+}
+
+.judul {
+    /* background-color: red; */
+    padding: 40px 0 50px 110px;
+}
+
+.judul h1 {
+    font-size: 6em;
+    color: var(--biru);
+    margin: 0;
+}
+
+.judul p {
+    font-size: 2.3em;
+    margin: 0;
+}
+
+.form {
+    /* background-color: green; */
+    padding: 0px 110px 0px 110px;
+    height: 50%;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.flex {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 35px;
+}
+
+.form label {
+    position: relative;
+    width: 100%;
+    font-size: 1.3em;
+}
+
+.form input {
+    font-size: 1.3em;
+    width: 100%;
+    padding: 25px 5px 5px 20px;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+    outline: 0;
+    transition: 0.3s ease;
+}
+
+.form label input + span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 0.9em;
+    transition: 0.3s ease;
+}
+
+.form label input:placeholder-shown + span {
+    top: 25px; /*jarak placeholder ke garis*/ 
+    font-size: 0.9em;
+}
+
+.form label input:focus,
+.form label input:valid {
+    border-bottom: 3px solid var(--biru);
+}
+
+.form label input:focus + span,
+.form label input:valid + span {
+    color: var(--biru);
+    top: 0;
+}
+
+.button {
+    justify-content: flex-end;
+    align-items: flex-end;
+    display: flex;
+    margin-top: -10px;
+}
+
+.button button {
+    border-radius: 30px;
+    border: 3px solid var(--biru);
+    background-color: transparent;
+    text-decoration: none;
+    height: 50px;
+    width: 200px;
+    font-size: 2em;
+    color: var(--biru);
+}
+
+.button button:hover {
+    border-color: #1e5ab4;
+    color: #1e5ab4;
+}
+
+.kanan {
+    height: 100%;
+    width: 100%;
+}
+
+.image {
+    width: 100%;
+    height: 70vh;
+}
+
+.quote {
+    justify-content: center;
+    display: flex;
+    padding-top: 10px;
+    width: 100%;
+    height: 20vh;
+    text-align: center;
+    color: var(--kuning);
+    font-size: 3em;
+}
+
+.quote p {
+    margin: 0;
+    max-width: 500px;
+}
+
+.image {
+    position: relative;
+}
+
+.image img {
+    position: absolute;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.image img[src="asset/smile1.jpg"] {
+    height: 60vh;
+    width: 60vh;
+    top: 30px;
+    right: 0;
+}
+
+.image img[src="asset/smile2.jpg"] {
+    height: 30vh;
+    width: 30vh;
+    left: 90px;
+    bottom: 10px;
+}
+
+.image img[src="asset/smile3.jpg"] {
+    object-position: top center;
+    height: 20vh;
+    width: 20vh;
+    left: 190px;
+}
+
+.image div {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.bullet1 {
+    background-color: var(--kuning);
+    height: 20vh;
+    width: 20vh;
+    top: 130px;
+    left: 50px;
+}
+
+.bullet2 {
+    background-color: var(--biru);
+    height: 10vh;
+    width: 10vh;
+    top: 220px;
+    left: 220px;
+}
+
+.bullet3 {
+    background-color: var(--kuning);
+    height: 6vh;
+    width: 6vh;
+    left: 335px;
+    bottom: 70px;
+}
+
+/*footer*/
+.foot {
+    background-color: #fff100;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    height: 400px;
+}
+
+.social-links {
+    height: 90px;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 40px;
+}
+.social-links i{
+    color: #0066FF;
+    font-size: 35px;
+    display: inline-block;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.social-links a .bi-youtube:hover{
+    color: red;
+    transition: all 0.3s ease;
+    transform: scale(1.7) translateZ(0);
+}
+.social-links a .bi-twitter-x:hover{
+    color: black;
+    transition: all 0.3s ease;
+    transform: scale(1.5) translateZ(0);
+}
+.social-links a .bi-instagram:hover{
+    background: linear-gradient(to top right, yellow, orange, red, purple, blue);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: all 0.3s ease;
+    transform: scale(1.5) translateZ(0);
+}
+.social-links a .bi-linkedin:hover{
+    color: #0077B5;
+    transition: all 0.3s ease;
+    transform: scale(1.5) translateZ(0);
+}
+
+.par {
+    color: #0066ff;
+    text-align: center;
+    font-size: 24px;
+    height: 120px;
+    width: 50%;
+}  
+
+.par p {
+    margin: 0;
+}
+
+.logfoot {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 150px;
+}
+
+.logfoot img {
+    padding: 30px;
+    height: 100px;
+}
+
+.copy {
+    text-align: center;
+    color: #0066ff;
+    height: 30px;
+    width: 50%;
+}
