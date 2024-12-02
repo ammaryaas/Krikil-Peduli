@@ -408,6 +408,7 @@ input[type="file"]::file-selector-button {
     height: 110vh;
     transition: transform 0.5s ease-in-out;
     border-radius: 0 100px 100px 0;
+    object-fit: cover;
 }
 
 .slide.active {

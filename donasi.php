@@ -14,10 +14,10 @@
         <div class="navbar">
             <div class="logo"><img src="asset/logo.png"></div>
             <div class="menu">
-                <a href="landingpage.html">Home</a>
+                <a href="home.html">Home</a>
                 <a href="profile.html">Profile</a>
-                <a href="transparasi.html">Transparasi</a>
-                <a href="#" class="login">Join Volunteer</a>
+                <a href="transparency.html">Transparency</a>
+                <a href="volunteer.html" class="login">Join Volunteer</a>
             </div>
         </div>
     </nav>

@@ -1,0 +1,418 @@
+:root {
+    --kuning: #fff100;
+    --biru: #0066ff;
+}
+
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+    overflow-x: hidden;
+
+}
+.logo img{
+    width: 50%;
+    height: auto;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    height: 90px;
+    width: 76%;
+    margin: 0 auto;
+    font-size: 1.5em;
+}
+.navbar a {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+    border-bottom: 3px solid transparent;
+}
+.navbar .menu a:not(.login):hover{
+    color: #fff100;
+}
+.navbar .menu a:not(.login)::after {
+    content: ''; 
+    position: absolute; 
+    bottom: -5px; 
+    left: 50%; 
+    width: 0; 
+    height: 3px; 
+    background-color: #fff100; 
+    transform: translateX(-50%); 
+    transition: width 0.5s ease; 
+}
+.navbar .menu a:not(.login):hover::after {
+    width: 100%; 
+}
+.navbar .menu a:not(.login),
+.navbar .menu a.active:not(.login) { 
+    position: relative;
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar .menu a:not(.login):hover,
+.navbar .menu a.active:not(.login) {  
+    color: #fff100;
+}
+
+.navbar .menu a:not(.login)::after,
+.navbar .menu a.active:not(.login)::after {  
+    content: ''; 
+    position: absolute; 
+    bottom: -5px; 
+    left: 50%; 
+    width: 0; 
+    height: 3px; 
+    background-color: #fff100; 
+    transform: translateX(-50%); 
+    transition: width 0.5s ease; 
+}
+
+.navbar .menu a:not(.login):hover::after,
+.navbar .menu a.active:not(.login)::after {  
+    width: 100%; 
+}
+.navbar .login {
+    background-color: #fff100;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    top: 0;
+}
+.navbar .login:hover {
+    background-color: white;
+    color: #fff100;
+    border: 2px solid #fff100; 
+    top: -5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+}
+
+.bowl {
+    /* background-color: rebeccapurple; */
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+}
+
+.header {
+    /* background-color: red; */
+    display: grid;
+    width: 90%;
+    height: 900vh;
+}
+
+.header img {
+    position: absolute;
+    width: 90%;
+    z-index: -1;
+}
+
+.header h1 {
+    /* border: 1px solid purple; */
+    color: var(--biru);
+    font-size: 4em;
+    max-width: 60%;
+    margin: 0;
+    padding: 20px;
+    line-height: 1;
+}
+
+.report {
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 59vh;
+    display: flex;
+    align-items: flex-end;
+    padding: 50px;
+    padding: 0 0 40px 40px;
+}
+
+.glass {
+    backdrop-filter: blur(15px);
+    color: white;
+    width: 120vh;
+    height: 35vh;
+    border-radius: 30px;
+    padding: 25px;
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255, 0),
+        rgba(255,255,255, 0.2)
+    );
+}
+
+.glass span {
+    font-size: 3em;
+}
+
+.totalan {
+    color: #ffffff;
+    font-size: 6em;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
+.spell {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.month {
+    color: var(--kuning);
+    font-size: 1.5em;
+}
+
+.gambar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 30px;
+    padding: 30px;
+    width: 100%;
+    height: 100vh;
+}
+
+.card {
+    /* border: 1px solid black; */
+    border-radius: 30px;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.i {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.i img {
+    height: 40px;
+    width: 40px;
+}
+
+.narasi {
+    background-color: var(--biru);
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+}
+
+.narasi p {
+    color: white;
+    font-size: 1em;
+    margin: 0;
+}
+
+.narasi h1 {
+    color: var(--kuning);
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.card.sarah {
+    background-image: url(../asset/sarah.jpg);
+    background-position: 70%;
+}
+
+.card.naura {
+    background-image: url(../asset/naura.jpg);
+}
+
+.card.rawa {
+    background-image: url(../asset/rawa.jpg);
+}
+
+.card.moana {
+    background-image: url(../asset/moana.jpg);
+    background-position-y: 100%;
+    background-position-x: 60%;
+}
+
+.card.cibauk {
+    background-image: url(../asset/cibauk.jpg);
+    background-position-y: 90%;
+}
+
+.card.alfred {
+    background-image: url(../asset/alfred.jpg);
+}
+
+.card.twin {
+    background-image: url(../asset/twin.jpg);
+    background-position: center;
+}
+
+.card.cikurung {
+    background-image:  url(../asset/cikurung.jpg);
+}
+
+.detail {
+    /* background-color: purple; */
+    width: 100%;
+    height: 50vh;
+    display: grid;
+}
+
+.rinci {
+    /* border: 1px solid black; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+}
+
+.flow {
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px 0 40px;
+}
+
+.flow h2 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.in {
+    color: rgb(52, 243, 52);
+}
+
+.out {
+    color: red;
+}
+
+.total {
+    /* border: 1px solid black; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.kuning {
+    border: 5px solid var(--kuning);
+    border-radius: 30px;
+    width: 95%;
+    height: 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 0 20px;
+}
+
+.kuning h2 {
+    color: var(--kuning);
+    font-size: 3em;
+    margin: 0;
+}
+
+/* footer */
+.footer{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff100;
+    width: 100%;
+    height: 100px;
+    margin-top: -5px;
+    padding: 20px 50px;
+    
+}
+.bungkus{
+    color: #0066FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.kiri {
+    height: 80px;
+    width: 250px;
+}
+.kiri img {
+    padding: 10px;
+    height: 80px;
+}
+.border{
+    background-color: #0066FF;
+    border-radius: 20px;
+    height: 60px;
+    width: 5px;
+}
+.tengah {
+    padding: 20px;
+    justify-content: left;
+    text-align: left;
+}
+
+.about {
+    margin-bottom: 10px;
+}
+
+.about a {
+    text-decoration: none;
+    color: #0066FF;
+    margin: 0 10px;
+}
+
+.copyright {
+    color: #0066FF;
+    font-size: 14px;
+}
+
+.medsos {
+    display: flex;
+    gap: 30px;
+}
+
+.medsos i{
+    display: inline-block;
+    font-size: 35px;
+    color: #0066FF;
+}
+
+.medsos a:hover .bi-youtube{
+    color: red;
+    transition: all 0.3s ease;
+    transform: scale(1.7) translateZ(0);
+}
+.medsos a .bi-twitter-x:hover{
+    color: black;
+    transition: all 0.3s ease;
+    transform: scale(1.5) translateZ(0);
+}
+.medsos a .bi-instagram:hover{
+    background: linear-gradient(to top right, yellow, orange, red, purple, blue);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: all 0.3s ease;
+    transform: scale(1.5) translateZ(0);
+}
+.medsos a .bi-linkedin:hover{
+    color: #0077B5;
+    transition: all 0.3s ease;
+    transform: scale(1.5) translateZ(0);
+}

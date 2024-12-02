@@ -103,20 +103,17 @@ body {
 }
 
 .utama {
-    /* background-color: red; */
     height: 90vh;
     width: 100%;
     display: flex;
 }
 
 .kiri {
-    /* background-color: yellow; */
     height: 100%;
     width: 100%;
 }
 
 .judul {
-    /* background-color: red; */
     padding: 40px 0 50px 110px;
 }
 
@@ -132,7 +129,6 @@ body {
 }
 
 .form {
-    /* background-color: green; */
     padding: 0px 110px 0px 110px;
     height: 50%;
     width: 100%;
