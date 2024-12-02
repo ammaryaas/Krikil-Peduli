@@ -102,7 +102,6 @@ body {
 }
 
 .bowl {
-    /* background-color: rebeccapurple; */
     position: relative;
     align-items: center;
     display: flex;
@@ -112,7 +111,6 @@ body {
 }
 
 .header {
-    /* background-color: red; */
     display: grid;
     width: 90%;
     height: 900vh;
@@ -125,7 +123,6 @@ body {
 }
 
 .header h1 {
-    /* border: 1px solid purple; */
     color: var(--biru);
     font-size: 4em;
     max-width: 60%;
@@ -135,7 +132,6 @@ body {
 }
 
 .report {
-    /* border: 1px solid black; */
     width: 100%;
     height: 59vh;
     display: flex;
@@ -184,20 +180,26 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
-    gap: 30px;
+    gap: 40px;
     padding: 30px;
     width: 100%;
     height: 100vh;
 }
 
 .card {
-    /* border: 1px solid black; */
     border-radius: 30px;
     background-size: cover;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.3);
+    cursor: pointer;
 }
 
 .i {
@@ -207,8 +209,30 @@ body {
 }
 
 .i img {
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+}
+
+.i div {
+    background-color: var(--kuning);
+    height: 30px;
+    width: 30px;
+    border-radius: 30px;
+    color: white;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card:hover .i div {
+    width: 110px;
+    height: 30px;
+
 }
 
 .narasi {
@@ -268,14 +292,12 @@ body {
 }
 
 .detail {
-    /* background-color: purple; */
     width: 100%;
     height: 50vh;
     display: grid;
 }
 
 .rinci {
-    /* border: 1px solid black; */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -284,7 +306,6 @@ body {
 }
 
 .flow {
-    /* border: 1px solid white; */
     display: flex;
     justify-content: space-between;
     padding: 0 40px 0 40px;
@@ -304,7 +325,6 @@ body {
 }
 
 .total {
-    /* border: 1px solid black; */
     width: 100%;
     display: flex;
     justify-content: center;

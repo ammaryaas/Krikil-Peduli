@@ -3,8 +3,8 @@
 require_once 'midtrans-php-master/Midtrans.php'; // Pastikan anda telah menginstal midtrans via composer
 
 // Set your server key here
-\Midtrans\Config::$serverKey = 'Mid-server-#';
-\Midtrans\Config::$clientKey = 'Mid-client-#';
+\Midtrans\Config::$serverKey = '#';
+\Midtrans\Config::$clientKey = '#';
 \Midtrans\Config::$isProduction = true; // Ganti ke true jika sudah di produksi
 \Midtrans\Config::$isSanitized = true;
 \Midtrans\Config::$is3ds = true;
