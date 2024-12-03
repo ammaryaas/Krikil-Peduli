@@ -39,7 +39,7 @@
 
     <!-- middle -->
     <div class="gambar">
-        <div class="card sarah">
+        <div class="card sarah" data-id="1">
             <div class="i">
                 <img src="asset/detail.png">
                 <div>detail</div>
@@ -49,7 +49,7 @@
                 <h1>Rp 85.303.000</h1>
             </div>
         </div>
-        <div class="card naura">
+        <div class="card naura" data-id="2">
             <div class="i">
                 <img src="asset/detail.png">
                 <div>detail</div>
@@ -59,7 +59,7 @@
                 <h1>Rp 60.700.000</h1>
             </div>
         </div>
-        <div class="card rawa">
+        <div class="card rawa" data-id="3">
             <div class="i">
                 <img src="asset/detail.png">
                 <div>detail</div>
@@ -69,7 +69,7 @@
                 <h1>Rp 41.600.000</h1>
             </div>
         </div>
-        <div class="card moana">
+        <div class="card moana" data-id="4">
             <div class="i">
                 <img src="asset/detail.png">
                 <div>detail</div>
@@ -79,7 +79,7 @@
                 <h1>Rp 123.400.000</h1>
             </div>
         </div>
-        <div class="card cibauk">
+        <div class="card cibauk" data-id="5">
             <div class="i">
                 <img src="asset/detail.png">
                 <div>detail</div>
@@ -89,7 +89,7 @@
                 <h1>Rp 95.700.000</h1>
             </div>
         </div>
-        <div class="card alfred">
+        <div class="card alfred" data-id="6">
             <div class="i">
                 <img src="asset/detail.png">
                 <div>detail</div>
@@ -99,7 +99,7 @@
                 <h1>Rp 12.700.000</h1>
             </div>
         </div>
-        <div class="card twin">
+        <div class="card twin" data-id="7">
             <div class="i">
                 <img src="asset/detail.png">
                 <div>detail</div>
@@ -109,7 +109,7 @@
                 <h1>Rp 95.900.000</h1>
             </div>
         </div>
-        <div class="card cikurung">
+        <div class="card cikurung" data-id="8">
             <div class="i">
                 <img src="asset/detail.png">
                 <div>detail</div>
@@ -121,6 +121,27 @@
         </div>
     </div>
 
+    <!-- pop-up -->
+    <div class="popup-contain" id="popup">
+        <div class="popup">
+            <span class="exit" id="exit">&times;</span>
+            <h2 id="title"></h2>
+            <div class="batas"></div> <!-- garis kuning -->
+            <div class="nota" id="nota"> <!-- isi detail -->
+                <!-- <div class="grid">
+                    <span>Sarah Medicine</span>
+                    <span>5.580.000</span>
+                </div> -->
+            </div>
+            <div class="jumlah">
+                <div class="tambah"></div> <!-- garis biru -->
+                <div class="gridTot">
+                    <span>Total</span>
+                    <span id="count"></span>
+                </div>
+            </div> 
+        </div>
+    </div>
 
     <!-- lower -->
     <div class="detail">
@@ -131,7 +152,7 @@
             </div>
             <div class="flow">
                 <h2>monthly outcome</h2>
-                <h2 class="out">-(total)</h2>
+                <h2 class="out" id="sumTot"></h2>
             </div>
         </div>
         <div class="total">
@@ -175,5 +196,7 @@
             </a>
         </div>
     </div>
+
+    <script src="transparency.js"></script>
 </body>
 </html>

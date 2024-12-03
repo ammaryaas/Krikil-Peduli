@@ -291,6 +291,85 @@ body {
     background-image:  url(../asset/cikurung.jpg);
 }
 
+/* popup */
+.popup-contain {
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.popup {
+    background-color: white;
+    border-radius: 50px;
+    width: 55vh;
+    height: 70vh;
+    box-shadow: 0 20px 20px rgba(0,0,0,0.3);
+    padding: 30px;
+    position: relative;
+}
+
+.exit {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.popup h2 {
+    color: var(--kuning);
+    font-size: 3em;
+    margin: 0;
+    padding-bottom: 10px;
+    line-height: 1;
+}
+
+.batas {
+    background-color: var(--kuning);
+    height: 5px;
+    width: 70px;
+}
+
+.nota {
+    display: grid;
+    gap: 20px;
+    padding-top: 40px;
+}
+
+.grid {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5em;
+}
+
+.jumlah {
+    width: 86%;
+    position: absolute;
+    bottom: 40px;
+}
+
+.tambah {
+    background-color: var(--biru);
+    height: 4px;
+    width: 100%;
+}
+
+.gridTot {
+    display: flex;
+    justify-content: space-between;
+    color: var(--biru);
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-top: 10px;
+}
+/* popup */
+
 .detail {
     width: 100%;
     height: 50vh;
